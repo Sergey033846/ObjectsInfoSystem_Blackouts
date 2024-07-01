@@ -1,0 +1,60 @@
+﻿SELECT
+t_LVConsumersInfo."GUID", t_LVConsumersInfo."Contract", t_LVConsumersInfo."Customer", t_LVConsumersInfo."PointName", t_LVConsumersInfo."Address",
+v_LVConsumersA_LVNodes_GUID, v_LVConsumersA_LVNodes_OwnerGUID, v_LVConsumersA_LVNodes_Name,
+v_LVFiders_GUID, v_LVFiders_OwnerGUID, v_LVFiders_Name,
+v_Nodes_GUID, v_Nodes_OwnerGUID, v_Nodes_Name, v_Nodes_onBalance, v_Nodes_Transf,
+v_Transforms2_Ident, v_Transforms2_Unom, v_Transforms2_TypeTR, v_Transforms2_Snom,
+v_Fiders_GUID, v_Fiders_OwnerGUID, v_Fiders_Name,
+v_Sections_GUID, v_Sections_OwnerGUID, v_Sections_Name, v_Sections_Unom,
+v_Centers_GUID, v_Centers_OwnerGUID, v_Centers_Name
+
+FROM "LVConsumersInfo" AS t_LVConsumersInfo
+
+LEFT JOIN
+
+(SELECT
+t_LVConsumersA_LVNodes."GUID" AS v_LVConsumersA_LVNodes_GUID, t_LVConsumersA_LVNodes."OwnerGUID" AS v_LVConsumersA_LVNodes_OwnerGUID, t_LVConsumersA_LVNodes."Name" AS v_LVConsumersA_LVNodes_Name,
+v_LVFiders_GUID, v_LVFiders_OwnerGUID, (CASE WHEN v_LVFidersName IS NULL THEN 'подключен к ТП' ELSE v_LVFidersName END) AS v_LVFiders_Name
+FROM
+(SELECT "GUID", "OwnerGUID", "Name" FROM "LVConsumersA"
+UNION
+SELECT "GUID", "OwnerGUID", "Name" FROM "LVNodes") AS t_LVConsumersA_LVNodes
+LEFT JOIN
+(SELECT "GUID" AS v_LVFiders_GUID, "OwnerGUID" AS v_LVFiders_OwnerGUID, "Name" AS v_LVFidersName FROM "LVFiders") AS t_LVFiders
+ON t_LVConsumersA_LVNodes."OwnerGUID" = t_LVFiders.v_LVFiders_GUID
+)
+AS t_LVConsumersA_LVNodes_Fiders
+
+LEFT JOIN
+(SELECT "GUID" AS v_Nodes_GUID, "OwnerGUID" AS v_Nodes_OwnerGUID, "Name" AS v_Nodes_Name,
+(CASE
+WHEN "Nodes"."onBalance" = 0 THEN 'на балансе'
+WHEN "Nodes"."onBalance" = 1 THEN 'потребительская'
+WHEN "Nodes"."onBalance" = 2 THEN 'ССО'
+WHEN "Nodes"."onBalance" = 3 THEN 'ССП'
+END) AS v_Nodes_onBalance,
+"Transf" AS v_Nodes_Transf
+FROM "Nodes") AS t_Nodes
+ON (t_LVConsumersA_LVNodes_Fiders.v_LVConsumersA_LVNodes_OwnerGUID = t_Nodes.v_Nodes_GUID) OR (t_LVConsumersA_LVNodes_Fiders.v_LVFiders_OwnerGUID = t_Nodes.v_Nodes_GUID)
+
+LEFT JOIN
+(SELECT "Ident" AS v_Transforms2_Ident, "Unom" AS v_Transforms2_Unom, "TypeTR" AS v_Transforms2_TypeTR, "Snom" AS v_Transforms2_Snom
+FROM "Transforms2") AS t_Transforms2
+ON t_Nodes.v_Nodes_Transf = t_Transforms2.v_Transforms2_Ident
+
+LEFT JOIN
+(SELECT "GUID" AS v_Fiders_GUID, "OwnerGUID" AS v_Fiders_OwnerGUID, "Name" AS v_Fiders_Name
+FROM "Fiders") AS t_Fiders
+ON t_Nodes.v_Nodes_OwnerGUID = t_Fiders.v_Fiders_GUID
+
+LEFT JOIN
+(SELECT "GUID" AS v_Sections_GUID, "OwnerGUID" AS v_Sections_OwnerGUID, "Name" AS v_Sections_Name, "Unom" AS v_Sections_Unom
+FROM "Sections") AS t_Sections
+ON t_Fiders.v_Fiders_OwnerGUID = t_Sections.v_Sections_GUID
+
+LEFT JOIN
+(SELECT "GUID" AS v_Centers_GUID, "OwnerGUID" AS v_Centers_OwnerGUID, "Name" AS v_Centers_Name
+FROM "Centers") AS t_Centers
+ON t_Sections.v_Sections_OwnerGUID = t_Centers.v_Centers_GUID
+
+ON t_LVConsumersInfo.guid = v_LVConsumersA_LVNodes_GUID

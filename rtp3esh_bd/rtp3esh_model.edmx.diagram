@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="12fa57c4e5d54734bf470c60aa33bedd" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="RTP3ESHModel.Filial" Width="1.5" PointX="0.75" PointY="11.125" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_AOEnergo" Width="1.5" PointX="7.5" PointY="12.25" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Centers" Width="1.5" PointX="14.25" PointY="6.25" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Coors" Width="1.5" PointX="7.5" PointY="5.75" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_DB" Width="1.5" PointX="3" PointY="10.625" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Fiders" Width="1.5" PointX="18.75" PointY="5.625" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_GUID" Width="1.5" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Owners" Width="1.5" PointX="5.25" PointY="9.125" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_PES" Width="1.5" PointX="9.75" PointY="8.875" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_References" Width="1.5" PointX="7.5" PointY="9.125" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_ReferencesTypes" Width="1.5" PointX="5.25" PointY="11.625" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Regions" Width="1.5" PointX="5.25" PointY="19.5" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_RES" Width="1.5" PointX="12" PointY="7.125" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Sections" Width="1.5" PointX="16.5" PointY="5.625" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Structures" Width="1.5" PointX="5.25" PointY="14.125" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Unom" Width="1.5" PointX="14.25" PointY="3.375" />
+        <AssociationConnector Association="RTP3ESHModel.R_152" />
+        <AssociationConnector Association="RTP3ESHModel.R_123" />
+        <AssociationConnector Association="RTP3ESHModel.R_124" />
+        <AssociationConnector Association="RTP3ESHModel.R_126" />
+        <AssociationConnector Association="RTP3ESHModel.R_129" />
+        <AssociationConnector Association="RTP3ESHModel.R_131" />
+        <AssociationConnector Association="RTP3ESHModel.R_133" />
+        <AssociationConnector Association="RTP3ESHModel.R_122" />
+        <AssociationConnector Association="RTP3ESHModel.R_136" />
+        <AssociationConnector Association="RTP3ESHModel.R_138" />
+        <AssociationConnector Association="RTP3ESHModel.R_141" />
+        <AssociationConnector Association="RTP3ESHModel.R_142" />
+        <AssociationConnector Association="RTP3ESHModel.R_143" />
+        <AssociationConnector Association="RTP3ESHModel.R_151" />
+        <AssociationConnector Association="RTP3ESHModel.R_139" />
+        <AssociationConnector Association="RTP3ESHModel.R_140" />
+        <AssociationConnector Association="RTP3ESHModel.R_125" />
+        <AssociationConnector Association="RTP3ESHModel.R_127" />
+        <AssociationConnector Association="RTP3ESHModel.R_132" />
+        <AssociationConnector Association="RTP3ESHModel.R_128" />
+        <AssociationConnector Association="RTP3ESHModel.R_145" />
+        <AssociationConnector Association="RTP3ESHModel.R_134" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Lines" Width="1.5" PointX="21" PointY="8.625" />
+        <AssociationConnector Association="RTP3ESHModel.R_147" />
+        <AssociationConnector Association="RTP3ESHModel.R_146" />
+        <AssociationConnector Association="RTP3ESHModel.R_148" />
+        <AssociationConnector Association="RTP3ESHModel.R_149" />
+        <AssociationConnector Association="RTP3ESHModel.R_150" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_TPType" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_TypicalLoadCurves" Width="1.5" PointX="16.875" PointY="1.75" />
+        <AssociationConnector Association="RTP3ESHModel.R_153" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_ExLines" Width="1.5" PointX="26.25" PointY="13.25" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_LVFiders" Width="1.5" PointX="26.25" PointY="9" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_LVLines" Width="1.5" PointX="28.5" PointY="13.5" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_LVNodes" Width="1.5" PointX="28.5" PointY="10.25" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Manufacturers" Width="1.5" PointX="14.25" PointY="13.875" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Nodes" Width="1.5" PointX="24" PointY="8.125" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Nodes3" Width="1.5" PointX="18.5" PointY="9" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Provods" Width="1.5" PointX="18.75" PointY="14" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_ProvodTypes" Width="1.5" PointX="16.5" PointY="13.625" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_TypeLoads" Width="1.5" PointX="24" PointY="4.75" />
+        <AssociationConnector Association="RTP3ESHModel.R_163" />
+        <AssociationConnector Association="RTP3ESHModel.R_164" />
+        <AssociationConnector Association="RTP3ESHModel.R_166" />
+        <AssociationConnector Association="RTP3ESHModel.R_160" />
+        <AssociationConnector Association="RTP3ESHModel.R_161" />
+        <AssociationConnector Association="RTP3ESHModel.R_155" />
+        <AssociationConnector Association="RTP3ESHModel.R_154" />
+        <AssociationConnector Association="RTP3ESHModel.R_174" />
+        <AssociationConnector Association="RTP3ESHModel.R_178" />
+        <AssociationConnector Association="RTP3ESHModel.R_180" />
+        <AssociationConnector Association="RTP3ESHModel.R_186" />
+        <AssociationConnector Association="RTP3ESHModel.R_187" />
+        <AssociationConnector Association="RTP3ESHModel.R_175" />
+        <AssociationConnector Association="RTP3ESHModel.R_176" />
+        <AssociationConnector Association="RTP3ESHModel.R_177" />
+        <AssociationConnector Association="RTP3ESHModel.R_179" />
+        <AssociationConnector Association="RTP3ESHModel.R_181" />
+        <AssociationConnector Association="RTP3ESHModel.R_184" />
+        <AssociationConnector Association="RTP3ESHModel.R_185" />
+        <AssociationConnector Association="RTP3ESHModel.R_171" />
+        <AssociationConnector Association="RTP3ESHModel.R_156" />
+        <AssociationConnector Association="RTP3ESHModel.R_157" />
+        <AssociationConnector Association="RTP3ESHModel.R_158" />
+        <AssociationConnector Association="RTP3ESHModel.R_159" />
+        <AssociationConnector Association="RTP3ESHModel.R_188" />
+        <AssociationConnector Association="RTP3ESHModel.R_170" />
+        <AssociationConnector Association="RTP3ESHModel.R_168" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_DoubleLines" Width="1.5" PointX="23.25" PointY="14.125" />
+        <AssociationConnector Association="RTP3ESHModel.R_172" />
+        <AssociationConnector Association="RTP3ESHModel.R_173" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Transforms3" Width="1.5" PointX="21.5" PointY="1.375" />
+        <AssociationConnector Association="RTP3ESHModel.R_194" />
+        <AssociationConnector Association="RTP3ESHModel.R_193" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_LVConsumers" Width="1.5" PointX="26.25" PointY="5" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_LVConsumersA" Width="1.5" PointX="7.5" PointY="2.625" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_SwitchGN" Width="1.5" PointX="14.25" PointY="18.25" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_SwitchGR" Width="1.5" PointX="16.5" PointY="17.375" />
+        <AssociationConnector Association="RTP3ESHModel.R_195" />
+        <AssociationConnector Association="RTP3ESHModel.R_200" />
+        <AssociationConnector Association="RTP3ESHModel.R_205" />
+        <AssociationConnector Association="RTP3ESHModel.R_206" />
+        <AssociationConnector Association="RTP3ESHModel.R_201" />
+        <AssociationConnector Association="RTP3ESHModel.R_202" />
+        <AssociationConnector Association="RTP3ESHModel.R_203" />
+        <AssociationConnector Association="RTP3ESHModel.R_199" />
+        <AssociationConnector Association="RTP3ESHModel.R_198" />
+        <AssociationConnector Association="RTP3ESHModel.R_197" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_LVConsumersInfo" Width="1.5" PointX="28.5" PointY="5" />
+        <AssociationConnector Association="RTP3ESHModel.R_204" />
+        <EntityTypeShape EntityType="RTP3ESHModel.RTP3_Transforms2" Width="1.5" PointX="21.5" PointY="17.25" />
+        <AssociationConnector Association="RTP3ESHModel.R_191" />
+        <AssociationConnector Association="RTP3ESHModel.R_190" />
+        <EntityTypeShape EntityType="RTP3ESHModel.ProgramOptions" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RTP3ESHModel.ConsumersInfo" Width="1.5" PointX="5.25" PointY="0.75" />
+        <AssociationConnector Association="RTP3ESHModel.R_207" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
